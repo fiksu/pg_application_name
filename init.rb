@@ -1,1 +1,1 @@
-require 'pg_application_name"
+require 'pg_application_name.rb'

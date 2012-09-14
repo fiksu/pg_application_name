@@ -1,6 +1,6 @@
 require 'active_record'
 require 'active_record/base'
-require 'active_record/connection_adapters/connection_pool'
+require 'active_record/connection_adapters/abstract/connection_pool'
 
 module ActiveRecord
   module ConnectionAdapters

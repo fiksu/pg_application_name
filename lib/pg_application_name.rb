@@ -1,3 +1,3 @@
-require 'af/postgres_monkey_patch'
-require 'af/connection_pool_monkey_patch'
-require 'af/version'
+require 'pg_application_name/postgres_monkey_patch'
+require 'pg_application_name/connection_pool_monkey_patch'
+require 'pg_application_name/version'

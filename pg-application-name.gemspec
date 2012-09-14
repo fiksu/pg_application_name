@@ -12,12 +12,11 @@ Gem::Specification.new do |s|
  s.description = "This gem stamps an identification mark on the postgres database connection using the postgres connection variable 'application_name'. Such a stamp can be viewed in pg_stat_activity."
  s.authors     = ["Keith Gabryelski"]
  s.email       = 'keith@fiksu.com'
- s.executables = `git ls-files -- bin/*`.split("\n").map{|f| File.basename(f)}
  s.files       = `git ls-files`.split("\n")
  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
  s.require_path = 'lib'
  s.homepage    = 'http://github.com/fiksu/pg-application-name'
- s.add_dependency "rails", '>= 3.0.0'
  s.add_dependency "pg"
- s.add_dependency 'rspec-rails', '2.8.1'
+ s.add_dependency "rails", '>= 3.0.0'
+ s.add_dependency 'rspec-rails'
 end
