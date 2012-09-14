@@ -1,4 +1,4 @@
 module PgApplicationName
   # the current version of this gem
-  VERSION = "0.8.0"
+  VERSION = "1.0.0"
 end

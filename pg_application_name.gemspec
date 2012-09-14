@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
  s.name        = 'pg_application_name'
  s.version     = PgApplicationName::VERSION
  s.license     = 'New BSD License'
- s.date        = '2012-09-13'
+ s.date        = '2012-09-14'
  s.summary     = "Stamp an ActiveRecord connection to a postgres database with an appropriate application_name."
  s.description = "This gem stamps an identification mark on the postgres database connection using the postgres connection variable 'application_name'. Such a stamp can be viewed in pg_stat_activity."
  s.authors     = ["Keith Gabryelski"]
