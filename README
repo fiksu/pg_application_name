@@ -1,0 +1,21 @@
+pg-application-name
+===================
+
+Stamps an ActiveRecord connection point to a Postgres database with
+the process id of this rails process.
+
+This is accomplished by setting the 'application_name' connection
+variable on the ActiveRecord connection.
+
+By default all ActiveRecord connections will be stamped with the
+process id, as:
+
+  rails_development=# select procpid,usename,application_name,current_query from pg_stat_activity;
+   procpid | usename  |        application_name       |                                current_query                                 
+  ---------+----------+-------------------------------+------------------------------------------------------------------------------
+     27054 | postgres | Examples::Application/pid=805 | select procpid,usename,application_name,current_query from pg_stat_activity;
+  (1 row)
+
+The application name can be set:
+
+  ActiveRecord::Base.connection.set_server_application_name("#{Rails.application.class.name}-8.0.5/pid=#{Process.pid}")
