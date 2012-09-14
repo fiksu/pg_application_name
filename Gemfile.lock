@@ -4,7 +4,7 @@ PATH
     pg-application-name (0.8.0)
       pg
       rails (>= 3.0.0)
-      rspec-rails (= 2.8.1)
+      rspec-rails
 
 GEM
   remote: http://rubygems.org/
