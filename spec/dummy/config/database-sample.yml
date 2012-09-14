@@ -1,0 +1,32 @@
+common: &common
+  adapter: postgresql
+  username: postgres
+  password: postgres
+  encoding: SQL_ASCII
+  template: template0
+  pool: 5
+  timeout: 5000
+
+local: &local
+  host: 127.0.0.1
+
+# -----------------
+# *** part ***
+# -----------------
+
+development:
+  <<: *common
+  <<: *local
+  database: pg_app_name_production
+
+production:
+  <<: *common
+  <<: *local
+  database: pg_app_name_production
+
+
+test:
+  <<: *common
+  <<: *local
+  database: pg_app_name_test
+
