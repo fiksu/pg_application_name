@@ -1,4 +1,4 @@
-pg-application-name
+pg_application_name
 ===================
 
 Stamps an ActiveRecord connection point to a Postgres database with

@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    pg-application-name (0.8.0)
+    pg_application_name (0.8.0)
       pg
       rails (>= 3.0.0)
       rspec-rails
@@ -105,4 +105,4 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  pg-application-name!
+  pg_application_name!

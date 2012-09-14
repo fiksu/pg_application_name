@@ -9,7 +9,7 @@ require "sprockets/railtie"
 # require "rails/test_unit/railtie"
 
 Bundler.require
-require "pg-application-name"
+require "pg_application_name"
 
 module Dummy
   class Application < Rails::Application
