@@ -4,7 +4,7 @@ $LOAD_PATH.push File.expand_path("../lib", __FILE__)
 require "pg_application_name/version"
 
 Gem::Specification.new do |s|
- s.name        = 'pg-application-name'
+ s.name        = 'pg_application_name'
  s.version     = PgApplicationName::VERSION
  s.license     = 'New BSD License'
  s.date        = '2012-09-13'
@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
  s.files       = `git ls-files`.split("\n")
  s.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
  s.require_path = 'lib'
- s.homepage    = 'http://github.com/fiksu/pg-application-name'
+ s.homepage    = 'http://github.com/fiksu/pg_application_name'
  s.add_dependency "pg"
  s.add_dependency "rails", '>= 3.0.0'
  s.add_dependency 'rspec-rails'

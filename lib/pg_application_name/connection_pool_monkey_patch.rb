@@ -5,13 +5,16 @@ require 'active_record/connection_adapters/abstract/connection_pool'
 module ActiveRecord
   module ConnectionAdapters
     class ConnectionPool
-      @connection_application_name = "#{Rails.application.class.name}/#{Process.pid}"
+      @connection_application_name = nil
 
       def self.connection_application_name=(value)
         return @connection_application_name = value
       end
 
       def self.connection_application_name
+        if @connection_application_name.blank?
+          @connection_application_name = "#{Rails.application.class.name}/#{Process.pid}"
+        end
         return @connection_application_name
       end
 
