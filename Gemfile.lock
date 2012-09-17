@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    pg_application_name (0.8.0)
+    pg_application_name (1.0.0)
       pg
       rails (>= 3.0.0)
       rspec-rails

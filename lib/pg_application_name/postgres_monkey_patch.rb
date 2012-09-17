@@ -5,14 +5,16 @@ require 'active_record/connection_adapters/abstract_adapter'
 module ActiveRecord::ConnectionAdapters
   class PostgreSQLAdapter < AbstractAdapter
     def set_server_variable(var, value)
-      var = var.to_s.gsub(/'/, "''")
-      value = value.to_s.gsub(/'/, "''")
-      execute("set #{var} = '#{value}'")
+      if var.to_s.split(' ').size == 1
+        value = value.to_s.gsub(/'/, "''")
+        execute("set #{var} = '#{value}'")
+      end
     end
 
     def get_user_variable(var)
-      var = var.gsub(/'/, "''")
-      return execute("show #{var}").values[0][0]
+      if var.split(' ').size == 1
+        return execute("show #{var}").values[0][0]
+      end
     end
 
     def set_server_application_name(value)
