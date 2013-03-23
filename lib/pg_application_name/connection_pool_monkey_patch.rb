@@ -20,13 +20,17 @@ module ActiveRecord
 
       def self.initialize_connection_application_name(application_name)
         self.connection_application_name = application_name
-        ActiveRecord::Base.connection.set_server_application_name(self.connection_application_name)
+        if ActiveRecord::Base.connection.respond_to? :set_server_application_name
+          ActiveRecord::Base.connection.set_server_application_name(self.connection_application_name)
+        end
       end
 
       private
       def new_connection_with_set_application_name
         c = new_connection_without_set_application_name
-        c.set_server_application_name(self.class.connection_application_name)
+        if c.respond_to? :set_server_application_name
+          c.set_server_application_name(self.class.connection_application_name)
+        end
         c
       end
       alias_method_chain :new_connection, :set_application_name
